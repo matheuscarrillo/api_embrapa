@@ -6,7 +6,7 @@ Este script automatiza a extração e organização de dados do sistema **VitiBr
 
 Certifique-se de que os seguintes pré-requisitos estão instalados:
 
-1. **Python 3.x**
+1. **Python 3.12**
 2. **Google Chrome** e **ChromeDriver** compatíveis com sua versão do navegador.
 3. Bibliotecas Python:
    - `selenium`
