@@ -31,7 +31,7 @@ dict_namecsv = {
 }
 
 # Configuração do diretório de download e renomeação
-download_dir = r"C:\Users\mathe\OneDrive\Área de Trabalho\POS_TECH\first_app\cursofiap\download"  # Altere para o seu diretório desejado
+download_dir = r"C:\Users\thais.r.carvalho\Documents\Pos Machine Learning"  # Altere para o seu diretório desejado
 
 # Função para configurar o WebDriver com um diretório de download específico
 def configurar_driver(download_dir):
@@ -47,7 +47,7 @@ def configurar_driver(download_dir):
 # Inicializando o WebDriver
 driver = configurar_driver(download_dir)
 
-np.absolute()
+# np.absolute()
 
 def download_rename_file(url_pagina, option, descricao, suboption, namecsv):
     """
