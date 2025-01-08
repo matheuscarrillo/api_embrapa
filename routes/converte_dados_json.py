@@ -1,12 +1,13 @@
 import os
 import pandas as pd
 import json
+from io import StringIO
 
 
-def convert_json_to_df(nome_arquivo, caminho_arquivo):
-    caminho_arquivo = f"C:\\Users\\thais.r.carvalho\\Documents\\Pos Machine Learning\\api_embrapa\\download\\{nome_arquivo}.csv"
+def convert_json_to_df(csv_content):
+    # caminho_arquivo = f"C:\\Users\\thais.r.carvalho\\Documents\\Pos Machine Learning\\api_embrapa\\download\\{nome_arquivo}.csv"
 
-    df = pd.read_csv(caminho_arquivo, delimiter=';')
+    df = pd.read_csv(StringIO(csv_content), delimiter=';')
 
     dados_estruturados = []
 
