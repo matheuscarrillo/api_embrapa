@@ -3,14 +3,14 @@ import logging
 import os
 
 from fastapi import APIRouter
-from fastapi import Response
+from fastapi import Response, Query
 import sys
 from datetime import datetime
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(SCRIPT_DIR))
-from routes.converte_dados_json import convert_json_to_df
-from google.cloud import storage
-
+from fastapi.responses import JSONResponse
+from fastapi.encoders import jsonable_encoder
+from google.cloud import bigquery
 
 logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(levelname)s:%(funcName)s:%(message)s")
 
@@ -20,27 +20,37 @@ qt_rows = 0
 
 
 @router.get("/comercializacao")
-def producao_eventos() -> Response:
+def comercializacao_eventos(
+    ano: int = Query(None, description="Filtrar pelo ano de exportação (1970 a 2023)"),
+    categoria_principal: str = Query(None, description="Categoria Principal")) -> Response:
 
     try:
-        BUCKET_NAME = "embrapa_api"
-        FILE_NAME = "raw/comercializacao/dados_opt_04_Comercialização.csv"
-        client = storage.Client()
-        # client = storage.Client.from_service_account_json('C:/Users/thais.r.carvalho/Downloads/credentials.json') 
-        bucket = client.get_bucket(BUCKET_NAME)
-        blob = bucket.blob(FILE_NAME)
-        csv_content = blob.download_as_text()
 
+        client = bigquery.Client()
+        # client = bigquery.Client.from_service_account_json('C:/Users/thais.r.carvalho/Downloads/credentials.json')
 
-        response_emprapa_comercializacao_eventos = convert_json_to_df(csv_content)
-        logging.info(f"Arquivo {FILE_NAME}.csv coletado com sucesso")
-        logging.info(response_emprapa_comercializacao_eventos)
-        if response_emprapa_comercializacao_eventos:
-                return Response(
-                    content=response_emprapa_comercializacao_eventos,
-                    status_code=200,
-                    media_type="application/json",
-                )
+        query = """
+            SELECT * FROM `river-handbook-446101-a0.embrapa.comercializacao`
+        """
+        filters = []
+
+        if ano:
+            filters.append(f"ano = {ano}")
+        if categoria_principal:
+            filters.append(f"lower(categoria_principal) = lower('{categoria_principal}')")
+
+        # Adicionar cláusula WHERE apenas se houver filtros
+        if filters:
+            query += " WHERE " + " AND ".join(filters)
+
+        # Executar a consulta
+        query_job = client.query(query)
+        results = [dict(row) for row in query_job]
+        if not results:
+            return JSONResponse(content={"Status": "No Data", "Msg": "Nenhum dado encontrado para os filtros fornecidos."}, headers={"Content-Type": "application/json"}, status_code=404)
+        json_data = jsonable_encoder(results)
+
+        return JSONResponse(content=json_data, headers={"Content-Type": "application/json"})
     except Exception as ex:
         return Response(
             content=json.dumps({"Status": "Error", "Msg": str(ex)}), status_code=500, media_type="application/json"
