@@ -6,7 +6,7 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi import Response
 from routes import producao
-# from routes import processamento
+from routes import processamento
 from routes import comercializacao
 from routes import importacao
 from routes import exportacao
@@ -15,7 +15,7 @@ from routes import exportacao
 app = FastAPI()
 
 app.include_router(producao.router)
-# app.include_router(processamento.router)
+app.include_router(processamento.router)
 app.include_router(comercializacao.router)
 # app.include_router(exportacao.router)
 app.include_router(importacao.router)
@@ -27,4 +27,4 @@ async def root() -> Response:
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
+    uvicorn.run(app, host="127.0.0.1", port=int(os.environ.get("PORT", 8080)))

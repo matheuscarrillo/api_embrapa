@@ -10,6 +10,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(SCRIPT_DIR))
 from routes.converte_dados_json import convert_json_to_df
 from google.cloud import storage
+from google.cloud import bigquery
 
 
 
@@ -26,7 +27,7 @@ def importacao_vinhos_mesa_eventos() -> Response:
         BUCKET_NAME = "embrapa_api"
         FILE_NAME = "raw/importacao/vinhos_mesa/dados_opt_05_Importação_subopt_01.csv"
         client = storage.Client()
-        # client = storage.Client.from_service_account_json('C:/Users/thais.r.carvalho/Downloads/credentials.json') 
+        client = bigquery.Client.from_service_account_json(r'C:\Users\mathe\OneDrive\Área de Trabalho\POS_TECH\api_embrapa\credentials.json')
         bucket = client.get_bucket(BUCKET_NAME)
         blob = bucket.blob(FILE_NAME)
         csv_content = blob.download_as_text()

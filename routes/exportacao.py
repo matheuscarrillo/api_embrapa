@@ -126,19 +126,19 @@ logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(levelname)s:%(f
 #     ano: str = Query(None, description="Filtrar pelo ano de exportação"),
 #     pais: str = Query(None, description="Filtrar pelo país de exportação")) -> Response:
 
-#     try:
-BUCKET_NAME = "embrapa_api"
-FILE_NAME = "raw/exportacao/suco_uva/dados_opt_06_Exportação_subopt_04.json"
-# client = storage.Client()
-client = storage.Client.from_service_account_json('C:/Users/thais.r.carvalho/Downloads/credentials.json') 
-bucket = client.get_bucket(BUCKET_NAME)
-blob = bucket.blob(FILE_NAME)
-csv_content = blob.download_as_text()
+# #     try:
+# BUCKET_NAME = "embrapa_api"
+# FILE_NAME = "raw/exportacao/suco_uva/dados_opt_06_Exportação_subopt_04.json"
+# # client = storage.Client()
+# client = storage.Client.from_service_account_json('C:/Users/thais.r.carvalho/Downloads/credentials.json') 
+# bucket = client.get_bucket(BUCKET_NAME)
+# blob = bucket.blob(FILE_NAME)
+# csv_content = blob.download_as_text()
 
-# Converta o conteúdo do JSON em um objeto Python
-response_emprapa_exportacao_eventos = json.loads(csv_content)
-print(type(response_emprapa_exportacao_eventos))
-filtered_data = response_emprapa_exportacao_eventos
+# # Converta o conteúdo do JSON em um objeto Python
+# response_emprapa_exportacao_eventos = json.loads(csv_content)
+# print(type(response_emprapa_exportacao_eventos))
+# filtered_data = response_emprapa_exportacao_eventos
 
 # Verifica se os dados filtrados estão vazios
 # if not filtered_data:
