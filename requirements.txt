@@ -6,7 +6,10 @@ uvicorn
 requests
 pandas
 google-cloud
-google-cloud-storage
 google-cloud-bigquery
 pyyaml
 unidecode
+python-jose
+passlib[bcrypt]
+pydantic
+google-cloud-secret-manager

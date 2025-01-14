@@ -16,7 +16,6 @@ logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(levelname)s:%(f
 
 
 router = APIRouter()
-qt_rows = 0
 
 
 @router.get("/comercializacao")

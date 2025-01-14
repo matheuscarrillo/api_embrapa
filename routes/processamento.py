@@ -17,7 +17,6 @@ logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(levelname)s:%(f
 
 
 router = APIRouter()
-qt_rows = 0
 
 @router.get("/processamento_viniferas")
 def processamento_viniferas(
@@ -26,8 +25,8 @@ def processamento_viniferas(
 
     try:
 
-        # client = bigquery.Client()
-        client = bigquery.Client.from_service_account_json(r'C:\Users\mathe\OneDrive\Área de Trabalho\POS_TECH\api_embrapa\credentials.json')
+        client = bigquery.Client()
+        # client = bigquery.Client.from_service_account_json(r'C:\Users\mathe\OneDrive\Área de Trabalho\POS_TECH\api_embrapa\credentials.json')
 
         query = """
             SELECT * FROM `river-handbook-446101-a0.embrapa.processamento_viniferas`
@@ -64,8 +63,8 @@ def processamento_americanas_e_hibridas(
 
     try:
 
-        # client = bigquery.Client()
-        client = bigquery.Client.from_service_account_json(r'C:\Users\mathe\OneDrive\Área de Trabalho\POS_TECH\api_embrapa\credentials.json')
+        client = bigquery.Client()
+        # client = bigquery.Client.from_service_account_json(r'C:\Users\mathe\OneDrive\Área de Trabalho\POS_TECH\api_embrapa\credentials.json')
 
         query = """
             SELECT * FROM `river-handbook-446101-a0.embrapa.processamento_americanas_e_hibridas`
@@ -103,8 +102,8 @@ def producao_eventos(
 
     try:
 
-        # client = bigquery.Client()
-        client = bigquery.Client.from_service_account_json(r'C:\Users\mathe\OneDrive\Área de Trabalho\POS_TECH\api_embrapa\credentials.json')
+        client = bigquery.Client()
+        # client = bigquery.Client.from_service_account_json(r'C:\Users\mathe\OneDrive\Área de Trabalho\POS_TECH\api_embrapa\credentials.json')
 
         query = """
             SELECT * FROM `river-handbook-446101-a0.embrapa.processamento_sem_classificacao`
@@ -142,8 +141,8 @@ def producao_eventos(
 
     try:
 
-        # client = bigquery.Client()
-        client = bigquery.Client.from_service_account_json(r'C:\Users\mathe\OneDrive\Área de Trabalho\POS_TECH\api_embrapa\credentials.json')
+        client = bigquery.Client()
+       # client = bigquery.Client.from_service_account_json(r'C:\Users\mathe\OneDrive\Área de Trabalho\POS_TECH\api_embrapa\credentials.json')
 
         query = """
             SELECT * FROM `river-handbook-446101-a0.embrapa.processamento_uvas_de_mesa`
