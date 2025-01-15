@@ -1,11 +1,7 @@
 import json
 import logging
-from fastapi import APIRouter, status, Depends
+from fastapi import APIRouter, Depends
 from fastapi import Response, Query
-import sys
-from datetime import datetime
-# SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-# sys.path.append(os.path.dirname(SCRIPT_DIR))
 from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
 from google.cloud import bigquery
@@ -20,7 +16,8 @@ router = APIRouter()
 @router.get("/comercializacao")
 def comercializacao_eventos(
     ano: int = Query(None, description="Filtrar pelo ano de exportação (1970 a 2023)"),
-    categoria_principal: str = Query(None, description="Categoria Principal")) -> Response:
+    categoria_principal: str = Query(None, description="Categoria Principal"),
+    current_user: dict = Depends(get_current_user)) -> Response:
 
     try:
 
@@ -51,5 +48,5 @@ def comercializacao_eventos(
         return JSONResponse(content=json_data, headers={"Content-Type": "application/json"})
     except Exception as ex:
         return Response(
-            content=json.dumps({"Status": "Error", "Msg": str(ex)}), status_code=500, media_type="application/json"
+            content=json.dumps({"Status": "Error", "Msg": str(ex), "User": current_user}), status_code=500, media_type="application/json"
         )

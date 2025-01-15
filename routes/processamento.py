@@ -1,6 +1,6 @@
 import json
 import logging
-from fastapi import APIRouter, status, Depends
+from fastapi import APIRouter, Depends
 from fastapi import Response, Query
 from datetime import datetime
 from routes.auth import get_current_user
@@ -50,7 +50,7 @@ def processamento_viniferas_eventos(
        
     except Exception as ex:
         return Response(
-            content=json.dumps({"Status": "Error", "Msg": str(ex)}), status_code=500, media_type="application/json"
+            content=json.dumps({"Status": "Error", "Msg": str(ex), "User": current_user}), status_code=500, media_type="application/json"
         )
 
 @router.get("/processamento_americanas_e_hibridas")
@@ -89,7 +89,7 @@ def processamento_americanas_e_hibridas_eventos(
        
     except Exception as ex:
         return Response(
-            content=json.dumps({"Status": "Error", "Msg": str(ex)}), status_code=500, media_type="application/json"
+            content=json.dumps({"Status": "Error", "Msg": str(ex), "User": current_user}), status_code=500, media_type="application/json"
         )
 
 
@@ -129,7 +129,7 @@ def processamento_sem_classificacao_eventos(
        
     except Exception as ex:
         return Response(
-            content=json.dumps({"Status": "Error", "Msg": str(ex)}), status_code=500, media_type="application/json"
+            content=json.dumps({"Status": "Error", "Msg": str(ex), "User": current_user}), status_code=500, media_type="application/json"
         )
     
 
@@ -169,7 +169,7 @@ def processamento_uvas_de_mesa_eventos(
        
     except Exception as ex:
         return Response(
-            content=json.dumps({"Status": "Error", "Msg": str(ex)}), status_code=500, media_type="application/json"
+            content=json.dumps({"Status": "Error", "Msg": str(ex), "User": current_user}), status_code=500, media_type="application/json"
         )
 
 

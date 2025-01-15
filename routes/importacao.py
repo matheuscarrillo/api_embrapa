@@ -1,11 +1,7 @@
 import json
 import logging
-import os
-
-from fastapi import APIRouter, status, Depends
+from fastapi import APIRouter, Depends
 from fastapi import Response, Query
-import sys
-from datetime import datetime
 from routes.auth import get_current_user
 from google.cloud import bigquery
 from fastapi.responses import JSONResponse
@@ -54,7 +50,7 @@ def importacao_vinhos_mesa_eventos(
        
     except Exception as ex:
         return Response(
-            content=json.dumps({"Status": "Error", "Msg": str(ex)}), status_code=500, media_type="application/json"
+            content=json.dumps({"Status": "Error", "Msg": str(ex), "User": current_user}), status_code=500, media_type="application/json"
         )
 
 @router.get("/importacao_espumantes")
@@ -93,7 +89,7 @@ def importacao_espumantes_eventos(
        
     except Exception as ex:
         return Response(
-            content=json.dumps({"Status": "Error", "Msg": str(ex)}), status_code=500, media_type="application/json"
+            content=json.dumps({"Status": "Error", "Msg": str(ex), "User": current_user}), status_code=500, media_type="application/json"
         )
 
 
@@ -133,7 +129,7 @@ def importacao_uvas_frescas_eventos(
        
     except Exception as ex:
         return Response(
-            content=json.dumps({"Status": "Error", "Msg": str(ex)}), status_code=500, media_type="application/json"
+            content=json.dumps({"Status": "Error", "Msg": str(ex), "User": current_user}), status_code=500, media_type="application/json"
         )
     
 
@@ -173,7 +169,7 @@ def importacao_uvas_passas_eventos(
        
     except Exception as ex:
         return Response(
-            content=json.dumps({"Status": "Error", "Msg": str(ex)}), status_code=500, media_type="application/json"
+            content=json.dumps({"Status": "Error", "Msg": str(ex), "User": current_user}), status_code=500, media_type="application/json"
         )
 
 @router.get("/importacao_suco_uva")
@@ -212,7 +208,7 @@ def importacao_suco_uva_eventos(
        
     except Exception as ex:
         return Response(
-            content=json.dumps({"Status": "Error", "Msg": str(ex)}), status_code=500, media_type="application/json"
+            content=json.dumps({"Status": "Error", "Msg": str(ex), "User": current_user}), status_code=500, media_type="application/json"
         )
 
 

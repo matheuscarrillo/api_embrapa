@@ -1,10 +1,7 @@
 import json
 import logging
-import os
-
-from fastapi import APIRouter, status, Depends
+from fastapi import APIRouter, Depends
 from fastapi import Response, Query
-import sys
 from datetime import datetime
 from google.cloud import bigquery
 from fastapi.responses import JSONResponse
@@ -54,7 +51,7 @@ def exportacao_vinhos_mesa_eventos(
        
     except Exception as ex:
         return Response(
-            content=json.dumps({"Status": "Error", "Msg": str(ex)}), status_code=500, media_type="application/json"
+            content=json.dumps({"Status": "Error", "Msg": str(ex), "User": current_user}), status_code=500, media_type="application/json"
         )
 
 @router.get("/exportacao_espumantes")
@@ -93,7 +90,7 @@ def exportacao_espumantes_eventos(
        
     except Exception as ex:
         return Response(
-            content=json.dumps({"Status": "Error", "Msg": str(ex)}), status_code=500, media_type="application/json"
+            content=json.dumps({"Status": "Error", "Msg": str(ex), "User": current_user}), status_code=500, media_type="application/json"
         )
 
 
@@ -133,7 +130,7 @@ def exportacao_uvas_frescas_eventos(
        
     except Exception as ex:
         return Response(
-            content=json.dumps({"Status": "Error", "Msg": str(ex)}), status_code=500, media_type="application/json"
+            content=json.dumps({"Status": "Error", "Msg": str(ex), "User": current_user}), status_code=500, media_type="application/json"
         )
     
 
@@ -173,5 +170,5 @@ def exportacao_suco_uva_eventos(
        
     except Exception as ex:
         return Response(
-            content=json.dumps({"Status": "Error", "Msg": str(ex)}), status_code=500, media_type="application/json"
+            content=json.dumps({"Status": "Error", "Msg": str(ex), "User": current_user}), status_code=500, media_type="application/json"
         )

@@ -1,21 +1,11 @@
 import json
 import logging
-import os
-
-from fastapi import APIRouter, status, Depends
+from fastapi import APIRouter, Depends
 from fastapi import Response, Query
-import sys
-from datetime import datetime
-# SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-# sys.path.append(os.path.dirname(SCRIPT_DIR))
 
 from google.cloud import bigquery
 from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
-# import os
-# import sys
-# SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-# sys.path.append(os.path.dirname(SCRIPT_DIR))
 from routes.auth import get_current_user
 
 logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(levelname)s:%(funcName)s:%(message)s")
@@ -32,7 +22,6 @@ def producao_eventos(
     try:
 
         client = bigquery.Client()
-        # client = bigquery.Client.from_service_account_json(r'C:\Users\thais.r.carvalho\Downloads\credentials_.json')
 
         query = """
             SELECT * FROM `river-handbook-446101-a0.embrapa.producao`
