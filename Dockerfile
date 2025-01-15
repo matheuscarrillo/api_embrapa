@@ -6,6 +6,12 @@ WORKDIR /app
 # Copie o arquivo de requisitos para o diretório de trabalho
 COPY requirements.txt .
 
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libffi-dev \
+    libssl-dev \
+    && apt-get clean
+
 # Instale as dependências do Python
 # Instale as dependências do Python
 RUN pip install --upgrade pip

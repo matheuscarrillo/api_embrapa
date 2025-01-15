@@ -2,13 +2,11 @@ import json
 import logging
 import os
 
-from fastapi import APIRouter
+from fastapi import APIRouter, status, Depends
 from fastapi import Response, Query
 import sys
 from datetime import datetime
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(os.path.dirname(SCRIPT_DIR))
-
+from routes.auth import get_current_user
 from google.cloud import bigquery
 from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
@@ -20,7 +18,8 @@ router = APIRouter()
 @router.get("/importacao_vinhos_mesa")
 def importacao_vinhos_mesa_eventos(
     ano: int = Query(None, description="Filtrar pelo ano de exportação (1970 a 2023)"),
-    categoria_principal: str = Query(None, description="Pais")) -> Response:
+    pais: str = Query(None, description="País"),
+    current_user: dict = Depends(get_current_user)) -> Response:
 
     try:
 
@@ -34,8 +33,8 @@ def importacao_vinhos_mesa_eventos(
 
         if ano:
             filters.append(f"ano = {ano}")
-        if categoria_principal:
-            filters.append(f"lower(pais) = lower('{categoria_principal}')")
+        if pais:
+            filters.append(f"lower(pais) = lower('{pais}')")
 
         # Adicionar cláusula WHERE apenas se houver filtros
         if filters:
@@ -61,7 +60,8 @@ def importacao_vinhos_mesa_eventos(
 @router.get("/importacao_espumantes")
 def importacao_espumantes_eventos(
     ano: int = Query(None, description="Filtrar pelo ano de exportação (1970 a 2023)"),
-    categoria_principal: str = Query(None, description="Pais")) -> Response:
+    pais: str = Query(None, description="País"),
+    current_user: dict = Depends(get_current_user)) -> Response:
 
     try:
 
@@ -75,8 +75,8 @@ def importacao_espumantes_eventos(
 
         if ano:
             filters.append(f"ano = {ano}")
-        if categoria_principal:
-            filters.append(f"lower(pais) = lower('{categoria_principal}')")
+        if pais:
+            filters.append(f"lower(pais) = lower('{pais}')")
 
         # Adicionar cláusula WHERE apenas se houver filtros
         if filters:
@@ -100,7 +100,8 @@ def importacao_espumantes_eventos(
 @router.get("/importacao_uvas_frescas")
 def importacao_uvas_frescas_eventos(
     ano: int = Query(None, description="Filtrar pelo ano de exportação (1970 a 2023)"),
-    categoria_principal: str = Query(None, description="Pais")) -> Response:
+    pais: str = Query(None, description="País"),
+    current_user: dict = Depends(get_current_user)) -> Response:
 
     try:
 
@@ -114,8 +115,8 @@ def importacao_uvas_frescas_eventos(
 
         if ano:
             filters.append(f"ano = {ano}")
-        if categoria_principal:
-            filters.append(f"lower(pais) = lower('{categoria_principal}')")
+        if pais:
+            filters.append(f"lower(pais) = lower('{pais}')")
 
         # Adicionar cláusula WHERE apenas se houver filtros
         if filters:
@@ -139,7 +140,8 @@ def importacao_uvas_frescas_eventos(
 @router.get("/importacao_uvas_passas")
 def importacao_uvas_passas_eventos(
     ano: int = Query(None, description="Filtrar pelo ano de exportação (1970 a 2023)"),
-    categoria_principal: str = Query(None, description="Pais")) -> Response:
+    pais: str = Query(None, description="País"),
+    current_user: dict = Depends(get_current_user)) -> Response:
 
     try:
 
@@ -153,8 +155,8 @@ def importacao_uvas_passas_eventos(
 
         if ano:
             filters.append(f"ano = {ano}")
-        if categoria_principal:
-            filters.append(f"lower(pais) = lower('{categoria_principal}')")
+        if pais:
+            filters.append(f"lower(pais) = lower('{pais}')")
 
         # Adicionar cláusula WHERE apenas se houver filtros
         if filters:
@@ -177,7 +179,8 @@ def importacao_uvas_passas_eventos(
 @router.get("/importacao_suco_uva")
 def importacao_suco_uva_eventos(
     ano: int = Query(None, description="Filtrar pelo ano de exportação (1970 a 2023)"),
-    categoria_principal: str = Query(None, description="Pais")) -> Response:
+    pais: str = Query(None, description="País"),
+    current_user: dict = Depends(get_current_user)) -> Response:
 
     try:
 
@@ -191,8 +194,8 @@ def importacao_suco_uva_eventos(
 
         if ano:
             filters.append(f"ano = {ano}")
-        if categoria_principal:
-            filters.append(f"lower(pais) = lower('{categoria_principal}')")
+        if pais:
+            filters.append(f"lower(pais) = lower('{pais}')")
 
         # Adicionar cláusula WHERE apenas se houver filtros
         if filters:

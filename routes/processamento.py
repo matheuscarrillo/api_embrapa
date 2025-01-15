@@ -1,13 +1,9 @@
 import json
 import logging
-import os
-
-from fastapi import APIRouter
+from fastapi import APIRouter, status, Depends
 from fastapi import Response, Query
-import sys
 from datetime import datetime
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(os.path.dirname(SCRIPT_DIR))
+from routes.auth import get_current_user
 
 from google.cloud import bigquery
 from fastapi.responses import JSONResponse
@@ -19,9 +15,10 @@ logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(levelname)s:%(f
 router = APIRouter()
 
 @router.get("/processamento_viniferas")
-def processamento_viniferas(
+def processamento_viniferas_eventos(
     ano: int = Query(None, description="Filtrar pelo ano de exportação (1970 a 2023)"),
-    categoria_principal: str = Query(None, description="Tipo Uva")) -> Response:
+    tipo_uva: str = Query(None, description="Tipo Uva"),
+    current_user: dict = Depends(get_current_user)) -> Response:
 
     try:
 
@@ -35,8 +32,8 @@ def processamento_viniferas(
 
         if ano:
             filters.append(f"ano = {ano}")
-        if categoria_principal:
-            filters.append(f"lower(tipo_uva) = lower('{categoria_principal}')")
+        if tipo_uva:
+            filters.append(f"lower(tipo_uva) = lower('{tipo_uva}')")
 
         # Adicionar cláusula WHERE apenas se houver filtros
         if filters:
@@ -57,9 +54,10 @@ def processamento_viniferas(
         )
 
 @router.get("/processamento_americanas_e_hibridas")
-def processamento_americanas_e_hibridas(
+def processamento_americanas_e_hibridas_eventos(
     ano: int = Query(None, description="Filtrar pelo ano de exportação (1970 a 2023)"),
-    categoria_principal: str = Query(None, description="Tipo Uva")) -> Response:
+    tipo_uva: str = Query(None, description="Tipo Uva"),
+    current_user: dict = Depends(get_current_user)) -> Response:
 
     try:
 
@@ -73,8 +71,8 @@ def processamento_americanas_e_hibridas(
 
         if ano:
             filters.append(f"ano = {ano}")
-        if categoria_principal:
-            filters.append(f"lower(tipo_uva) = lower('{categoria_principal}')")
+        if tipo_uva:
+            filters.append(f"lower(tipo_uva) = lower('{tipo_uva}')")
 
         # Adicionar cláusula WHERE apenas se houver filtros
         if filters:
@@ -96,9 +94,10 @@ def processamento_americanas_e_hibridas(
 
 
 @router.get("/processamento_sem_classificacao")
-def producao_eventos(
+def processamento_sem_classificacao_eventos(
     ano: int = Query(None, description="Filtrar pelo ano de exportação (1970 a 2023)"),
-    categoria_principal: str = Query(None, description="Tipo Uva")) -> Response:
+    tipo_uva: str = Query(None, description="Tipo Uva"),
+    current_user: dict = Depends(get_current_user)) -> Response:
 
     try:
 
@@ -112,8 +111,8 @@ def producao_eventos(
 
         if ano:
             filters.append(f"ano = {ano}")
-        if categoria_principal:
-            filters.append(f"lower(tipo_uva) = lower('{categoria_principal}')")
+        if tipo_uva:
+            filters.append(f"lower(tipo_uva) = lower('{tipo_uva}')")
 
         # Adicionar cláusula WHERE apenas se houver filtros
         if filters:
@@ -135,9 +134,10 @@ def producao_eventos(
     
 
 @router.get("/processamento_uvas_de_mesa")
-def producao_eventos(
+def processamento_uvas_de_mesa_eventos(
     ano: int = Query(None, description="Filtrar pelo ano de exportação (1970 a 2023)"),
-    categoria_principal: str = Query(None, description="Tipo Uva")) -> Response:
+    tipo_uva: str = Query(None, description="Tipo Uva"),
+    current_user: dict = Depends(get_current_user)) -> Response:
 
     try:
 
@@ -151,8 +151,8 @@ def producao_eventos(
 
         if ano:
             filters.append(f"ano = {ano}")
-        if categoria_principal:
-            filters.append(f"lower(tipo_uva) = lower('{categoria_principal}')")
+        if tipo_uva:
+            filters.append(f"lower(tipo_uva) = lower('{tipo_uva}')")
 
         # Adicionar cláusula WHERE apenas se houver filtros
         if filters:

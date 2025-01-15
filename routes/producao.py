@@ -2,16 +2,21 @@ import json
 import logging
 import os
 
-from fastapi import APIRouter
+from fastapi import APIRouter, status, Depends
 from fastapi import Response, Query
 import sys
 from datetime import datetime
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(os.path.dirname(SCRIPT_DIR))
+# SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+# sys.path.append(os.path.dirname(SCRIPT_DIR))
 
 from google.cloud import bigquery
 from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
+# import os
+# import sys
+# SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+# sys.path.append(os.path.dirname(SCRIPT_DIR))
+from routes.auth import get_current_user
 
 logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(levelname)s:%(funcName)s:%(message)s")
 
@@ -21,12 +26,13 @@ router = APIRouter()
 @router.get("/producao")
 def producao_eventos(
     ano: int = Query(None, description="Filtrar pelo ano de exportação (1970 a 2023)"),
-    categoria_principal: str = Query(None, description="Categoria Principal")) -> Response:
+    categoria_principal: str = Query(None, description="Categoria Principal"),
+    current_user: dict = Depends(get_current_user)) -> Response:
 
     try:
 
         client = bigquery.Client()
-        # client = bigquery.Client.from_service_account_json(r'C:\Users\mathe\OneDrive\Área de Trabalho\POS_TECH\api_embrapa\credentials.json')
+        # client = bigquery.Client.from_service_account_json(r'C:\Users\thais.r.carvalho\Downloads\credentials_.json')
 
         query = """
             SELECT * FROM `river-handbook-446101-a0.embrapa.producao`
@@ -53,5 +59,5 @@ def producao_eventos(
        
     except Exception as ex:
         return Response(
-            content=json.dumps({"Status": "Error", "Msg": str(ex)}), status_code=500, media_type="application/json"
+            content=json.dumps({"Status": "Error", "Msg": str(ex), "User": current_user}), status_code=500, media_type="application/json"
         )

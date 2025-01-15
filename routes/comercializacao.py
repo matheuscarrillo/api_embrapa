@@ -1,16 +1,15 @@
 import json
 import logging
-import os
-
-from fastapi import APIRouter
+from fastapi import APIRouter, status, Depends
 from fastapi import Response, Query
 import sys
 from datetime import datetime
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(os.path.dirname(SCRIPT_DIR))
+# SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+# sys.path.append(os.path.dirname(SCRIPT_DIR))
 from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
 from google.cloud import bigquery
+from routes.auth import get_current_user
 
 logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(levelname)s:%(funcName)s:%(message)s")
 

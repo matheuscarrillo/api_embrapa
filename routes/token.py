@@ -1,11 +1,11 @@
-from fastapi import FastAPI, HTTPException, Depends, status
+from fastapi import APIRouter, HTTPException, Depends, status
 from fastapi.security import OAuth2PasswordRequestForm
-from auth import create_access_token, get_user, verify_password
+from routes.auth import create_access_token, get_user, verify_password
 
-app = FastAPI()
+router = APIRouter()
 
 
-@app.post("/token", response_model=dict)
+@router.post("/token", response_model=dict)
 def login(form_data: OAuth2PasswordRequestForm = Depends()):
     """Rota de login para obter o token JWT."""
     user = get_user(form_data.username)

@@ -4,7 +4,6 @@ from jose import JWTError, jwt
 from fastapi import HTTPException, Depends
 from fastapi.security import OAuth2PasswordBearer
 from passlib.context import CryptContext
-from secret_manager import get_secret
 
 # Carregar variáveis de ambiente
 
@@ -12,7 +11,35 @@ from secret_manager import get_secret
 project_id = "river-handbook-446101-a0"
 secret_id = "embrapa-api-password"
 
-SECRET_KEY = get_secret(project_id, secret_id)
+from google.cloud import secretmanager
+
+
+def get_secret(project_id, secret_id, version_id="latest"):
+    """
+    Busca um secret do Google Secret Manager.
+
+    Args:
+        project_id (str): ID do projeto do Google Cloud.
+        secret_id (str): ID do secret no Secret Manager.
+        version_id (str): Versão do secret (padrão: "latest").
+
+    Returns:
+        str: Valor do secret.
+    """
+
+    # Cria o cliente com as credenciais
+    client = secretmanager.SecretManagerServiceClient()
+
+    # Forma o nome do recurso
+    secret_name = f"projects/{project_id}/secrets/{secret_id}/versions/{version_id}"
+
+    # Acessa o payload do secret
+    response = client.access_secret_version(name=secret_name)
+    secret_payload = response.payload.data.decode("UTF-8")
+
+    return secret_payload
+
+SECRET_KEY = "b1ef9b3950bf58f79e00b9c09d9520cf3c13ddce9472732587e12261972e17fd"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
@@ -23,9 +50,9 @@ pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 # Função para validar o token JWT
-
+# secret_value = get_secret(project_id, secret_id)
 fake_users_db = {
-    "user1": {"username": "user1"}
+    "user1": {"username": "user1", "hashed_password": pwd_context.hash("password1")}
 }
 
 def verify_password(plain_password: str, hashed_password: str) -> bool:
@@ -85,3 +112,28 @@ def get_current_user(token: str = Depends(oauth2_scheme)):
             detail="Invalid token",
             headers={"WWW-Authenticate": "Bearer"},
         )
+
+from fastapi import APIRouter, HTTPException, Depends, status
+from fastapi.security import OAuth2PasswordRequestForm
+# import os
+# import sys
+# SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+# sys.path.append(os.path.dirname(SCRIPT_DIR))
+# from auth import create_access_token, get_user, verify_password
+
+router = APIRouter()
+
+
+@router.post("/token", response_model=dict)
+def login(form_data: OAuth2PasswordRequestForm = Depends()):
+    """Rota de login para obter o token JWT."""
+    user = get_user(form_data.username)
+    if not user or not verify_password(form_data.password, user["hashed_password"]):
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Usuário ou senha incorretos",
+        )
+    # Cria o token JWT
+    access_token = create_access_token(data={"sub": user["username"]})
+    return {"access_token": access_token, "token_type": "bearer"}
+

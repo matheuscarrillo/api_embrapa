@@ -3,6 +3,7 @@ import os
 
 import uvicorn
 
+from routes import auth
 from fastapi import FastAPI
 from fastapi import Response
 from routes import producao
@@ -12,13 +13,16 @@ from routes import importacao
 from routes import exportacao
 
 
+
 app = FastAPI()
 
+app.include_router(auth.router)
 app.include_router(producao.router)
 app.include_router(processamento.router)
 app.include_router(comercializacao.router)
 app.include_router(exportacao.router)
 app.include_router(importacao.router)
+
 
 
 @app.get("/")
