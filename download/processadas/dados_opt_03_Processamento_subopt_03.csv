@@ -1,0 +1,541 @@
+ano;tipo_uva;cultivar;quantidade
+1970;Tintas;TINTAS;56976
+1970;Outros;Alphonse Lavallee;31878
+1970;Outros;Moscato de Hamburgo;25098
+1970;Brancas;BRANCAS;3900
+1970;Outros;Cardinal;0
+1970;Outros;Golden Queen;167
+1970;Outros;Patrícia;0
+1970;Outros;Perlona;0
+1970;Outros;Italia;3733
+1970;Outros;Rubi (Itália, Itália Ro);0
+1971;Tintas;TINTAS;43390
+1971;Outros;Alphonse Lavallee;2333
+1971;Outros;Moscato de Hamburgo;41057
+1971;Brancas;BRANCAS;16335
+1971;Outros;Cardinal;0
+1971;Outros;Golden Queen;8654
+1971;Outros;Patrícia;0
+1971;Outros;Perlona;0
+1971;Outros;Italia;7681
+1971;Outros;Rubi (Itália, Itália Ro);0
+1972;Tintas;TINTAS;4428
+1972;Outros;Alphonse Lavallee;170
+1972;Outros;Moscato de Hamburgo;4258
+1972;Brancas;BRANCAS;6829
+1972;Outros;Cardinal;0
+1972;Outros;Golden Queen;657
+1972;Outros;Patrícia;0
+1972;Outros;Perlona;4027
+1972;Outros;Italia;2145
+1972;Outros;Rubi (Itália, Itália Ro);0
+1973;Tintas;TINTAS;8939
+1973;Outros;Alphonse Lavallee;7690
+1973;Outros;Moscato de Hamburgo;1249
+1973;Brancas;BRANCAS;8052
+1973;Outros;Cardinal;0
+1973;Outros;Golden Queen;7312
+1973;Outros;Patrícia;0
+1973;Outros;Perlona;0
+1973;Outros;Italia;740
+1973;Outros;Rubi (Itália, Itália Ro);0
+1974;Tintas;TINTAS;125563
+1974;Outros;Alphonse Lavallee;124762
+1974;Outros;Moscato de Hamburgo;801
+1974;Brancas;BRANCAS;278951
+1974;Outros;Cardinal;0
+1974;Outros;Golden Queen;8467
+1974;Outros;Patrícia;0
+1974;Outros;Perlona;1695
+1974;Outros;Italia;268789
+1974;Outros;Rubi (Itália, Itália Ro);0
+1975;Tintas;TINTAS;183731
+1975;Outros;Alphonse Lavallee;74293
+1975;Outros;Moscato de Hamburgo;109438
+1975;Brancas;BRANCAS;587745
+1975;Outros;Cardinal;0
+1975;Outros;Golden Queen;6805
+1975;Outros;Patrícia;0
+1975;Outros;Perlona;1223
+1975;Outros;Italia;579717
+1975;Outros;Rubi (Itália, Itália Ro);0
+1976;Tintas;TINTAS;88512
+1976;Outros;Alphonse Lavallee;23684
+1976;Outros;Moscato de Hamburgo;64828
+1976;Brancas;BRANCAS;153445
+1976;Outros;Cardinal;0
+1976;Outros;Golden Queen;0
+1976;Outros;Patrícia;0
+1976;Outros;Perlona;1406
+1976;Outros;Italia;152039
+1976;Outros;Rubi (Itália, Itália Ro);0
+1977;Tintas;TINTAS;113591
+1977;Outros;Alphonse Lavallee;24430
+1977;Outros;Moscato de Hamburgo;89161
+1977;Brancas;BRANCAS;230332
+1977;Outros;Cardinal;0
+1977;Outros;Golden Queen;2391
+1977;Outros;Patrícia;0
+1977;Outros;Perlona;0
+1977;Outros;Italia;227941
+1977;Outros;Rubi (Itália, Itália Ro);0
+1978;Tintas;TINTAS;107994
+1978;Outros;Alphonse Lavallee;17339
+1978;Outros;Moscato de Hamburgo;90655
+1978;Brancas;BRANCAS;244151
+1978;Outros;Cardinal;0
+1978;Outros;Golden Queen;8715
+1978;Outros;Patrícia;0
+1978;Outros;Perlona;0
+1978;Outros;Italia;235436
+1978;Outros;Rubi (Itália, Itália Ro);0
+1979;Tintas;TINTAS;160889
+1979;Outros;Alphonse Lavallee;88822
+1979;Outros;Moscato de Hamburgo;72067
+1979;Brancas;BRANCAS;148002
+1979;Outros;Cardinal;0
+1979;Outros;Golden Queen;2051
+1979;Outros;Patrícia;0
+1979;Outros;Perlona;11377
+1979;Outros;Italia;134574
+1979;Outros;Rubi (Itália, Itália Ro);0
+1980;Tintas;TINTAS;68763
+1980;Outros;Alphonse Lavallee;23451
+1980;Outros;Moscato de Hamburgo;45312
+1980;Brancas;BRANCAS;74744
+1980;Outros;Cardinal;2235
+1980;Outros;Golden Queen;2765
+1980;Outros;Patrícia;0
+1980;Outros;Perlona;10722
+1980;Outros;Italia;59022
+1980;Outros;Rubi (Itália, Itália Ro);0
+1981;Tintas;TINTAS;55774
+1981;Outros;Alphonse Lavallee;12094
+1981;Outros;Moscato de Hamburgo;43680
+1981;Brancas;BRANCAS;51316
+1981;Outros;Cardinal;0
+1981;Outros;Golden Queen;0
+1981;Outros;Patrícia;0
+1981;Outros;Perlona;14467
+1981;Outros;Italia;36849
+1981;Outros;Rubi (Itália, Itália Ro);0
+1982;Tintas;TINTAS;27910
+1982;Outros;Alphonse Lavallee;7662
+1982;Outros;Moscato de Hamburgo;20248
+1982;Brancas;BRANCAS;53160
+1982;Outros;Cardinal;0
+1982;Outros;Golden Queen;0
+1982;Outros;Patrícia;0
+1982;Outros;Perlona;13971
+1982;Outros;Italia;39189
+1982;Outros;Rubi (Itália, Itália Ro);0
+1983;Tintas;TINTAS;8154
+1983;Outros;Alphonse Lavallee;2989
+1983;Outros;Moscato de Hamburgo;5165
+1983;Brancas;BRANCAS;19074
+1983;Outros;Cardinal;0
+1983;Outros;Golden Queen;0
+1983;Outros;Patrícia;0
+1983;Outros;Perlona;4948
+1983;Outros;Italia;14126
+1983;Outros;Rubi (Itália, Itália Ro);0
+1984;Tintas;TINTAS;5970
+1984;Outros;Alphonse Lavallee;4380
+1984;Outros;Moscato de Hamburgo;1590
+1984;Brancas;BRANCAS;14225
+1984;Outros;Cardinal;0
+1984;Outros;Golden Queen;1545
+1984;Outros;Patrícia;0
+1984;Outros;Perlona;10735
+1984;Outros;Italia;1945
+1984;Outros;Rubi (Itália, Itália Ro);0
+1985;Tintas;TINTAS;17553
+1985;Outros;Alphonse Lavallee;17553
+1985;Outros;Moscato de Hamburgo;0
+1985;Brancas;BRANCAS;21346
+1985;Outros;Cardinal;0
+1985;Outros;Golden Queen;4921
+1985;Outros;Patrícia;0
+1985;Outros;Perlona;10548
+1985;Outros;Italia;5877
+1985;Outros;Rubi (Itália, Itália Ro);0
+1986;Tintas;TINTAS;7352
+1986;Outros;Alphonse Lavallee;5147
+1986;Outros;Moscato de Hamburgo;2205
+1986;Brancas;BRANCAS;32966
+1986;Outros;Cardinal;0
+1986;Outros;Golden Queen;3358
+1986;Outros;Patrícia;0
+1986;Outros;Perlona;10753
+1986;Outros;Italia;18855
+1986;Outros;Rubi (Itália, Itália Ro);0
+1987;Tintas;TINTAS;12670
+1987;Outros;Alphonse Lavallee;12670
+1987;Outros;Moscato de Hamburgo;0
+1987;Brancas;BRANCAS;70127
+1987;Outros;Cardinal;0
+1987;Outros;Golden Queen;1321
+1987;Outros;Patrícia;0
+1987;Outros;Perlona;64694
+1987;Outros;Italia;4112
+1987;Outros;Rubi (Itália, Itália Ro);0
+1988;Tintas;TINTAS;58681
+1988;Outros;Alphonse Lavallee;0
+1988;Outros;Moscato de Hamburgo;0
+1988;Brancas;BRANCAS;0
+1988;Outros;Cardinal;0
+1988;Outros;Golden Queen;0
+1988;Outros;Patrícia;0
+1988;Outros;Perlona;0
+1988;Outros;Italia;0
+1988;Outros;Rubi (Itália, Itália Ro);0
+1989;Tintas;TINTAS;441541
+1989;Outros;Alphonse Lavallee;0
+1989;Outros;Moscato de Hamburgo;0
+1989;Brancas;BRANCAS;0
+1989;Outros;Cardinal;0
+1989;Outros;Golden Queen;0
+1989;Outros;Patrícia;0
+1989;Outros;Perlona;0
+1989;Outros;Italia;0
+1989;Outros;Rubi (Itália, Itália Ro);0
+1990;Tintas;TINTAS;157262
+1990;Outros;Alphonse Lavallee;0
+1990;Outros;Moscato de Hamburgo;0
+1990;Brancas;BRANCAS;0
+1990;Outros;Cardinal;0
+1990;Outros;Golden Queen;0
+1990;Outros;Patrícia;0
+1990;Outros;Perlona;0
+1990;Outros;Italia;0
+1990;Outros;Rubi (Itália, Itália Ro);0
+1991;Tintas;TINTAS;104326
+1991;Outros;Alphonse Lavallee;0
+1991;Outros;Moscato de Hamburgo;0
+1991;Brancas;BRANCAS;0
+1991;Outros;Cardinal;0
+1991;Outros;Golden Queen;0
+1991;Outros;Patrícia;0
+1991;Outros;Perlona;0
+1991;Outros;Italia;0
+1991;Outros;Rubi (Itália, Itália Ro);0
+1992;Tintas;TINTAS;94021
+1992;Outros;Alphonse Lavallee;0
+1992;Outros;Moscato de Hamburgo;0
+1992;Brancas;BRANCAS;0
+1992;Outros;Cardinal;0
+1992;Outros;Golden Queen;0
+1992;Outros;Patrícia;0
+1992;Outros;Perlona;0
+1992;Outros;Italia;0
+1992;Outros;Rubi (Itália, Itália Ro);0
+1993;Tintas;TINTAS;0
+1993;Outros;Alphonse Lavallee;0
+1993;Outros;Moscato de Hamburgo;0
+1993;Brancas;BRANCAS;0
+1993;Outros;Cardinal;0
+1993;Outros;Golden Queen;0
+1993;Outros;Patrícia;0
+1993;Outros;Perlona;0
+1993;Outros;Italia;0
+1993;Outros;Rubi (Itália, Itália Ro);0
+1994;Tintas;TINTAS;3852587
+1994;Outros;Alphonse Lavallee;0
+1994;Outros;Moscato de Hamburgo;0
+1994;Brancas;BRANCAS;0
+1994;Outros;Cardinal;0
+1994;Outros;Golden Queen;0
+1994;Outros;Patrícia;0
+1994;Outros;Perlona;0
+1994;Outros;Italia;0
+1994;Outros;Rubi (Itália, Itália Ro);0
+1995;Tintas;TINTAS;80197
+1995;Outros;Alphonse Lavallee;0
+1995;Outros;Moscato de Hamburgo;0
+1995;Brancas;BRANCAS;0
+1995;Outros;Cardinal;0
+1995;Outros;Golden Queen;0
+1995;Outros;Patrícia;0
+1995;Outros;Perlona;0
+1995;Outros;Italia;0
+1995;Outros;Rubi (Itália, Itália Ro);0
+1996;Tintas;TINTAS;1389173
+1996;Outros;Alphonse Lavallee;0
+1996;Outros;Moscato de Hamburgo;0
+1996;Brancas;BRANCAS;0
+1996;Outros;Cardinal;0
+1996;Outros;Golden Queen;0
+1996;Outros;Patrícia;0
+1996;Outros;Perlona;0
+1996;Outros;Italia;0
+1996;Outros;Rubi (Itália, Itália Ro);0
+1997;Tintas;TINTAS;374934
+1997;Outros;Alphonse Lavallee;0
+1997;Outros;Moscato de Hamburgo;0
+1997;Brancas;BRANCAS;0
+1997;Outros;Cardinal;0
+1997;Outros;Golden Queen;0
+1997;Outros;Patrícia;0
+1997;Outros;Perlona;0
+1997;Outros;Italia;0
+1997;Outros;Rubi (Itália, Itália Ro);0
+1998;Tintas;TINTAS;21638
+1998;Outros;Alphonse Lavallee;0
+1998;Outros;Moscato de Hamburgo;0
+1998;Brancas;BRANCAS;0
+1998;Outros;Cardinal;0
+1998;Outros;Golden Queen;0
+1998;Outros;Patrícia;0
+1998;Outros;Perlona;0
+1998;Outros;Italia;0
+1998;Outros;Rubi (Itália, Itália Ro);0
+1999;Tintas;TINTAS;480
+1999;Outros;Alphonse Lavallee;0
+1999;Outros;Moscato de Hamburgo;0
+1999;Brancas;BRANCAS;0
+1999;Outros;Cardinal;0
+1999;Outros;Golden Queen;0
+1999;Outros;Patrícia;0
+1999;Outros;Perlona;0
+1999;Outros;Italia;0
+1999;Outros;Rubi (Itália, Itália Ro);0
+2000;Tintas;TINTAS;13877
+2000;Outros;Alphonse Lavallee;0
+2000;Outros;Moscato de Hamburgo;13877
+2000;Brancas;BRANCAS;602113
+2000;Outros;Cardinal;0
+2000;Outros;Golden Queen;0
+2000;Outros;Patrícia;20515
+2000;Outros;Perlona;581598
+2000;Outros;Italia;0
+2000;Outros;Rubi (Itália, Itália Ro);0
+2001;Tintas;TINTAS;23660
+2001;Outros;Alphonse Lavallee;3613
+2001;Outros;Moscato de Hamburgo;20047
+2001;Brancas;BRANCAS;118013
+2001;Outros;Cardinal;0
+2001;Outros;Golden Queen;0
+2001;Outros;Patrícia;23661
+2001;Outros;Perlona;94352
+2001;Outros;Italia;0
+2001;Outros;Rubi (Itália, Itália Ro);0
+2002;Tintas;TINTAS;23239
+2002;Outros;Alphonse Lavallee;0
+2002;Outros;Moscato de Hamburgo;23239
+2002;Brancas;BRANCAS;100923
+2002;Outros;Cardinal;0
+2002;Outros;Golden Queen;0
+2002;Outros;Patrícia;42357
+2002;Outros;Perlona;58566
+2002;Outros;Italia;0
+2002;Outros;Rubi (Itália, Itália Ro);0
+2003;Tintas;TINTAS;7366
+2003;Outros;Alphonse Lavallee;0
+2003;Outros;Moscato de Hamburgo;7366
+2003;Brancas;BRANCAS;136658
+2003;Outros;Cardinal;0
+2003;Outros;Golden Queen;0
+2003;Outros;Patrícia;75480
+2003;Outros;Perlona;61178
+2003;Outros;Italia;0
+2003;Outros;Rubi (Itália, Itália Ro);0
+2004;Tintas;TINTAS;49698
+2004;Outros;Alphonse Lavallee;0
+2004;Outros;Moscato de Hamburgo;49698
+2004;Brancas;BRANCAS;73187
+2004;Outros;Cardinal;0
+2004;Outros;Golden Queen;0
+2004;Outros;Patrícia;6172
+2004;Outros;Perlona;33155
+2004;Outros;Italia;33860
+2004;Outros;Rubi (Itália, Itália Ro);0
+2005;Tintas;TINTAS;49820
+2005;Outros;Alphonse Lavallee;1500
+2005;Outros;Moscato de Hamburgo;48320
+2005;Brancas;BRANCAS;39470
+2005;Outros;Cardinal;1620
+2005;Outros;Golden Queen;0
+2005;Outros;Patrícia;0
+2005;Outros;Perlona;32105
+2005;Outros;Italia;1630
+2005;Outros;Rubi (Itália, Itália Ro);4115
+2006;Tintas;TINTAS;36105
+2006;Outros;Alphonse Lavallee;0
+2006;Outros;Moscato de Hamburgo;36105
+2006;Brancas;BRANCAS;17889
+2006;Outros;Cardinal;0
+2006;Outros;Golden Queen;0
+2006;Outros;Patrícia;0
+2006;Outros;Perlona;14569
+2006;Outros;Italia;3320
+2006;Outros;Rubi (Itália, Itália Ro);0
+2007;Tintas;TINTAS;66970
+2007;Outros;Alphonse Lavallee;0
+2007;Outros;Moscato de Hamburgo;66970
+2007;Brancas;BRANCAS;36619
+2007;Outros;Cardinal;0
+2007;Outros;Golden Queen;0
+2007;Outros;Patrícia;0
+2007;Outros;Perlona;25899
+2007;Outros;Italia;5130
+2007;Outros;Rubi (Itália, Itália Ro);5590
+2008;Tintas;TINTAS;101101
+2008;Outros;Alphonse Lavallee;0
+2008;Outros;Moscato de Hamburgo;101101
+2008;Brancas;BRANCAS;55297
+2008;Outros;Cardinal;4610
+2008;Outros;Golden Queen;0
+2008;Outros;Patrícia;0
+2008;Outros;Perlona;37376
+2008;Outros;Italia;2300
+2008;Outros;Rubi (Itália, Itália Ro);11011
+2009;Tintas;TINTAS;84397
+2009;Outros;Alphonse Lavallee;0
+2009;Outros;Moscato de Hamburgo;84397
+2009;Brancas;BRANCAS;14440
+2009;Outros;Cardinal;0
+2009;Outros;Golden Queen;0
+2009;Outros;Patrícia;0
+2009;Outros;Perlona;11335
+2009;Outros;Italia;0
+2009;Outros;Rubi (Itália, Itália Ro);3105
+2010;Tintas;TINTAS;31771
+2010;Outros;Alphonse Lavallee;0
+2010;Outros;Moscato de Hamburgo;31771
+2010;Brancas;BRANCAS;11575
+2010;Outros;Cardinal;0
+2010;Outros;Golden Queen;0
+2010;Outros;Patrícia;0
+2010;Outros;Perlona;10375
+2010;Outros;Italia;0
+2010;Outros;Rubi (Itália, Itália Ro);1200
+2011;Tintas;TINTAS;89305
+2011;Outros;Alphonse Lavallee;0
+2011;Outros;Moscato de Hamburgo;89305
+2011;Brancas;BRANCAS;19458
+2011;Outros;Cardinal;0
+2011;Outros;Golden Queen;0
+2011;Outros;Patrícia;0
+2011;Outros;Perlona;5575
+2011;Outros;Italia;0
+2011;Outros;Rubi (Itália, Itália Ro);13883
+2012;Tintas;TINTAS;145132
+2012;Outros;Alphonse Lavallee;0
+2012;Outros;Moscato de Hamburgo;145132
+2012;Brancas;BRANCAS;62564
+2012;Outros;Cardinal;0
+2012;Outros;Golden Queen;0
+2012;Outros;Patrícia;0
+2012;Outros;Perlona;9695
+2012;Outros;Italia;0
+2012;Outros;Rubi (Itália, Itália Ro);52869
+2013;Tintas;TINTAS;75362
+2013;Outros;Alphonse Lavallee;0
+2013;Outros;Moscato de Hamburgo;75362
+2013;Brancas;BRANCAS;4412
+2013;Outros;Cardinal;0
+2013;Outros;Golden Queen;0
+2013;Outros;Patrícia;0
+2013;Outros;Perlona;3378
+2013;Outros;Italia;0
+2013;Outros;Rubi (Itália, Itália Ro);1034
+2014;Tintas;TINTAS;65850
+2014;Outros;Alphonse Lavallee;0
+2014;Outros;Moscato de Hamburgo;65850
+2014;Brancas;BRANCAS;30600
+2014;Outros;Cardinal;0
+2014;Outros;Golden Queen;0
+2014;Outros;Patrícia;0
+2014;Outros;Perlona;850
+2014;Outros;Italia;0
+2014;Outros;Rubi (Itália, Itália Ro);29750
+2015;Tintas;TINTAS;108797
+2015;Outros;Alphonse Lavallee;0
+2015;Outros;Moscato de Hamburgo;108797
+2015;Brancas;BRANCAS;64540
+2015;Outros;Cardinal;0
+2015;Outros;Golden Queen;0
+2015;Outros;Patrícia;0
+2015;Outros;Perlona;3280
+2015;Outros;Italia;0
+2015;Outros;Rubi (Itália, Itália Ro);61260
+2016;Tintas;TINTAS;51310
+2016;Outros;Alphonse Lavallee;0
+2016;Outros;Moscato de Hamburgo;51310
+2016;Brancas;BRANCAS;3260
+2016;Outros;Cardinal;0
+2016;Outros;Golden Queen;0
+2016;Outros;Patrícia;0
+2016;Outros;Perlona;290
+2016;Outros;Italia;0
+2016;Outros;Rubi (Itália, Itália Ro);2970
+2017;Tintas;TINTAS;85510
+2017;Outros;Alphonse Lavallee;0
+2017;Outros;Moscato de Hamburgo;85510
+2017;Brancas;BRANCAS;5900
+2017;Outros;Cardinal;0
+2017;Outros;Golden Queen;0
+2017;Outros;Patrícia;0
+2017;Outros;Perlona;180
+2017;Outros;Italia;0
+2017;Outros;Rubi (Itália, Itália Ro);5720
+2018;Tintas;TINTAS;62567
+2018;Outros;Alphonse Lavallee;0
+2018;Outros;Moscato de Hamburgo;62567
+2018;Brancas;BRANCAS;730
+2018;Outros;Cardinal;0
+2018;Outros;Golden Queen;0
+2018;Outros;Patrícia;0
+2018;Outros;Perlona;730
+2018;Outros;Italia;0
+2018;Outros;Rubi (Itália, Itália Ro);0
+2019;Tintas;TINTAS;nd
+2019;Outros;Alphonse Lavallee;nd
+2019;Outros;Moscato de Hamburgo;nd
+2019;Brancas;BRANCAS;nd
+2019;Outros;Cardinal;nd
+2019;Outros;Golden Queen;nd
+2019;Outros;Patrícia;nd
+2019;Outros;Perlona;nd
+2019;Outros;Italia;nd
+2019;Outros;Rubi (Itália, Itália Ro);nd
+2020;Tintas;TINTAS;63474
+2020;Outros;Alphonse Lavallee;0
+2020;Outros;Moscato de Hamburgo;63474
+2020;Brancas;BRANCAS;45610
+2020;Outros;Cardinal;0
+2020;Outros;Golden Queen;0
+2020;Outros;Patrícia;0
+2020;Outros;Perlona;0
+2020;Outros;Italia;0
+2020;Outros;Rubi (Itália, Itália Ro);45610
+2021;Tintas;TINTAS;21732
+2021;Outros;Alphonse Lavallee;0
+2021;Outros;Moscato de Hamburgo;21732
+2021;Brancas;BRANCAS;52760
+2021;Outros;Cardinal;0
+2021;Outros;Golden Queen;0
+2021;Outros;Patrícia;0
+2021;Outros;Perlona;1710
+2021;Outros;Italia;0
+2021;Outros;Rubi (Itália, Itália Ro);51050
+2022;Tintas;TINTAS;*
+2022;Outros;Alphonse Lavallee;*
+2022;Outros;Moscato de Hamburgo;*
+2022;Brancas;BRANCAS;*
+2022;Outros;Cardinal;*
+2022;Outros;Golden Queen;*
+2022;Outros;Patrícia;*
+2022;Outros;Perlona;*
+2022;Outros;Italia;*
+2022;Outros;Rubi (Itália, Itália Ro);*
+2023;Tintas;TINTAS;175030
+2023;Outros;Alphonse Lavallee;0
+2023;Outros;Moscato de Hamburgo;175030
+2023;Brancas;BRANCAS;13440
+2023;Outros;Cardinal;0
+2023;Outros;Golden Queen;0
+2023;Outros;Patrícia;0
+2023;Outros;Perlona;0
+2023;Outros;Italia;0
+2023;Outros;Rubi (Itália, Itália Ro);13440

@@ -1,0 +1,122 @@
+producao:
+  caminho : 
+    - "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\POS_TECH\\api_embrapa\\download\\dados_opt_02_Producao.csv"
+  caminho_p_storage:
+    - "gs://embrapa_api/raw/producao/dados_opt_02_Producao.csv"
+  caminho_final: "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\POS_TECH\\api_embrapa\\download\\processadas"
+  tipo: 
+    - 'producao'
+  ids:
+    - "id"
+    - "control"
+    - "Produto"
+  var_name: "Ano"
+  value_name: "Quantidade"
+  col_cat: "Categoria Principal"
+  var_name_pivot: ""
+  ids_pivot: ""
+
+comercializacao:
+  caminho : 
+    - "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\POS_TECH\\api_embrapa\\download\\dados_opt_04_Comercialização.csv"
+  caminho_p_storage:
+    - "gs://embrapa_api/raw/comercializacao/dados_opt_04_Comercialização.csv"
+  caminho_final: "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\POS_TECH\\api_embrapa\\download\\processadas"
+  tipo: 
+    - 'comercializacao'
+  ids:
+    - "id"
+    - "control"
+    - "Produto"
+  var_name: "Ano"
+  value_name: "Quantidade"
+  col_cat: "Categoria Principal"
+  var_name_pivot: ""
+  ids_pivot: ""
+
+processamento:
+  caminho: 
+    - "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\POS_TECH\\api_embrapa\\download\\dados_opt_03_Processamento_subopt_01.csv"
+    - "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\POS_TECH\\api_embrapa\\download\\dados_opt_03_Processamento_subopt_02.csv"
+    - "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\POS_TECH\\api_embrapa\\download\\dados_opt_03_Processamento_subopt_03.csv"
+    - "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\POS_TECH\\api_embrapa\\download\\dados_opt_03_Processamento_subopt_04.csv"
+  caminho_p_storage:
+    - "gs://embrapa_api/raw/processamento/viniferas/dados_opt_03_Processamento_subopt_01.csv"
+    - "gs://embrapa_api/raw/processamento/americanas_e_hibridas/dados_opt_03_Processamento_subopt_02.csv"
+    - "gs://embrapa_api/raw/processamento/uvas_de_mesa/dados_opt_03_Processamento_subopt_03.csv"
+    - "gs://embrapa_api/raw/processamento/sem_classificacao/dados_opt_03_Processamento_subopt_04.csv"
+  caminho_final: "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\POS_TECH\\api_embrapa\\download\\processadas"
+  tipo: 
+    - 'processamento_viniferas'
+    - 'processamento_americanas_e_hibridas'
+    - 'processamento_uvas_de_mesa'
+    - 'processamento_sem_classificacao'
+  ids:
+    - "id"
+    - "control"
+    - "cultivar"
+  var_name: "Ano"
+  value_name: "Quantidade"
+  col_cat: "Tipo Uva"
+  var_name_pivot: ""
+  ids_pivot: ""
+
+
+importacao:
+  caminho : 
+    - "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\POS_TECH\\api_embrapa\\download\\dados_opt_05_Importação_subopt_01.csv"
+    - "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\POS_TECH\\api_embrapa\\download\\dados_opt_05_Importação_subopt_02.csv"
+    - "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\POS_TECH\\api_embrapa\\download\\dados_opt_05_Importação_subopt_03.csv"
+    - "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\POS_TECH\\api_embrapa\\download\\dados_opt_05_Importação_subopt_04.csv"
+    - "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\POS_TECH\\api_embrapa\\download\\dados_opt_05_Importação_subopt_05.csv"
+  caminho_p_storage:
+    - "gs://embrapa_api/raw/importacao/vinhos_mesa/dados_opt_05_Importação_subopt_01.csv"
+    - "gs://embrapa_api/raw/importacao/espumantes/dados_opt_05_Importação_subopt_02.csv"
+    - "gs://embrapa_api/raw/importacao/uvas_frescas/dados_opt_05_Importação_subopt_03.csv"
+    - "gs://embrapa_api/raw/importacao/uvas_passas/dados_opt_05_Importação_subopt_04.csv"
+    - "gs://embrapa_api/raw/importacao/suco_uva/dados_opt_05_Importação_subopt_05.csv"
+  caminho_final: "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\POS_TECH\\api_embrapa\\download\\processadas"
+  tipo: 
+    - 'importacao_vinhos_mesa'
+    - 'importacao_espumantes'
+    - 'importacao_uvas_frescas'
+    - 'importacao_uvas_passas'
+    - 'importacao_suco_uva'
+  ids:
+    - "Id"
+    - "País"
+  ids_pivot:
+    - "Id"
+    - "País"
+    - "Ano"
+  var_name: "Ano e Tipo"
+  var_name_pivot: "Tipo"
+  value_name: "Valor"
+
+exportacao:
+  caminho : 
+    - "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\POS_TECH\\api_embrapa\\download\\dados_opt_06_Exportação_subopt_01.csv"
+    - "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\POS_TECH\\api_embrapa\\download\\dados_opt_06_Exportação_subopt_02.csv"
+    - "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\POS_TECH\\api_embrapa\\download\\dados_opt_06_Exportação_subopt_03.csv"
+    - "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\POS_TECH\\api_embrapa\\download\\dados_opt_06_Exportação_subopt_04.csv"
+  caminho_p_storage:
+    - "gs://embrapa_api/raw/exportacao/vinhos_mesa/dados_opt_06_Exportação_subopt_01.csv"
+    - "gs://embrapa_api/raw/exportacao/espumantes/dados_opt_06_Exportação_subopt_02.csv"
+    - "gs://embrapa_api/raw/exportacao/uvas_frescas/dados_opt_06_Exportação_subopt_03.csv"
+    - "gs://embrapa_api/raw/exportacao/suco_uva/dados_opt_06_Exportação_subopt_04.csv"
+  caminho_final: "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\POS_TECH\\api_embrapa\\download\\processadas"
+  tipo: 
+    - 'exportacao_vinhos_mesa'
+    - 'exportacao_espumantes'
+    - 'exportacao_uvas_frescas'
+    - 'exportacao_suco_uva'
+  ids:
+    - "Id"
+    - "País"
+  ids_pivot:
+    - "Id"
+    - "País"
+    - "Ano"
+  var_name: "Ano e Tipo"
+  var_name_pivot: "Tipo"
+  value_name: "Valor"
