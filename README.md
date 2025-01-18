@@ -156,7 +156,30 @@ Para verificar a execução:
 
 # API de Consulta de Dados com FastAPI e Google BigQuery
 
-Este projeto implementa uma API utilizando **FastAPI** para consultar dados armazenados no Google BigQuery.
+Este projeto implementa uma API utilizando **FastAPI** para consultar dados armazenados no Google BigQuery. A partir desses dados será possível construir um modelo preditivo para estimar tendências de produção e consumo de produtos vitivinícolas, permitindo suporte à decisão para produtores e comerciantes do setor.
+
+
+
+**Arquitetura do Projeto**
+
+![Arquitetura Tech Challenge- 2 drawio](https://github.com/user-attachments/assets/cadda8b2-d941-4045-ba7f-ebfdfde275a1)
+
+1. Extração da fonte de dados do Embrapa. Para isso foi criado um script em python, usando biblioteca do selenium webdriver, que irá fazer o processo de webscrapping de cada uma das abas (Produção, Processamento, Comercialização, Importação e Exportação) e os arquivos gerados serão salvos em formato csv no Cloud Storage. Esse script será executado no Cloud Run e orquestrado pelo Composer, que é a implementação do Airflow na GCP.
+2. Em seguida será executada a tarefa de realizar a transformação dos dados, de fazer o pivot das colunas de anos, se transformarem em linhas e também da retirada de espaço em brancos, após essa transformação os dados são salvos no banco de dados BigQuery, foi criado uma tabela para cada arquivo gerado no processo de extração dos dados. Foi criada uma cloud function para execução desse script e também será executada pelo Airflow.
+
+3. Para a disponibilização de consulta dos dados, foi criada uma API utilizando o framework FastAPI. Essa API permite que os usuários consultem os dados de maneira eficiente e estruturada. O FastAPI é uma ferramenta moderna e performática para a construção de APIs em Python, reconhecida pela sua simplicidade, validação automática de dados e integração com ferramentas de documentação interativa, como o Swagger. Essa api possui autenticação JWT(JSON Web Token). O JWT é um padrão de autenticação seguro e amplamente utilizado para verificar a identidade dos usuários. No processo:
+
+
+      1. O cliente envia suas credenciais (como nome de usuário e senha) para a API.
+      2. Após validação, a API retorna um token JWT assinado.
+      3. Este token é enviado pelo cliente em cada solicitação subsequente, permitindo à API verificar a identidade do usuário sem a necessidade de reenviar as credenciais.
+
+   A API foi publicada no Google Cloud Run, um serviço gerenciado pelo Google Cloud que permite executar contêineres em escala. Isso significa que a API roda em um ambiente isolado e escalável, garantindo alta disponibilidade e desempenho.        Além disso, possui custo eficiente, é cobrado apenas pelo tempo de execução da API e pela quantidade de recursos usados.
+   As credenciais para autenticação da API foram salvas no Secret Manager e a imagem docker no repositório de Artifactory Registry.
+
+4. Treinamento do Modelo: O Vertex AI utiliza os dados do BigQuery para treinar modelos de aprendizado de máquina. Esses modelos podem ser usados para prever tendências, identificar padrões ou tomar decisões automatizadas com base nos dados da Embrapa.
+
+
 
 ## Estrutura do Projeto
 
