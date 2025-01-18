@@ -2,7 +2,6 @@ import json
 import logging
 from fastapi import APIRouter, Depends
 from fastapi import Response, Query
-from datetime import datetime
 from routes.auth import get_current_user
 
 from google.cloud import bigquery
@@ -23,7 +22,6 @@ def processamento_viniferas_eventos(
     try:
 
         client = bigquery.Client()
-        # client = bigquery.Client.from_service_account_json(r'C:\Users\mathe\OneDrive\Área de Trabalho\POS_TECH\api_embrapa\credentials.json')
 
         query = """
             SELECT * FROM `river-handbook-446101-a0.embrapa.processamento_viniferas`
@@ -62,8 +60,7 @@ def processamento_americanas_e_hibridas_eventos(
     try:
 
         client = bigquery.Client()
-        # client = bigquery.Client.from_service_account_json(r'C:\Users\mathe\OneDrive\Área de Trabalho\POS_TECH\api_embrapa\credentials.json')
-
+    
         query = """
             SELECT * FROM `river-handbook-446101-a0.embrapa.processamento_americanas_e_hibridas`
         """
@@ -102,7 +99,6 @@ def processamento_sem_classificacao_eventos(
     try:
 
         client = bigquery.Client()
-        # client = bigquery.Client.from_service_account_json(r'C:\Users\mathe\OneDrive\Área de Trabalho\POS_TECH\api_embrapa\credentials.json')
 
         query = """
             SELECT * FROM `river-handbook-446101-a0.embrapa.processamento_sem_classificacao`
@@ -142,8 +138,7 @@ def processamento_uvas_de_mesa_eventos(
     try:
 
         client = bigquery.Client()
-       # client = bigquery.Client.from_service_account_json(r'C:\Users\mathe\OneDrive\Área de Trabalho\POS_TECH\api_embrapa\credentials.json')
-
+ 
         query = """
             SELECT * FROM `river-handbook-446101-a0.embrapa.processamento_uvas_de_mesa`
         """

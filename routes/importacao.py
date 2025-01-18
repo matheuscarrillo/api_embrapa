@@ -20,7 +20,6 @@ def importacao_vinhos_mesa_eventos(
     try:
 
         client = bigquery.Client()
-        # client = bigquery.Client.from_service_account_json(r'C:\Users\mathe\OneDrive\Área de Trabalho\POS_TECH\api_embrapa\credentials.json')
 
         query = """
             SELECT * FROM `river-handbook-446101-a0.embrapa.importacao_vinhos_mesa`
@@ -62,7 +61,6 @@ def importacao_espumantes_eventos(
     try:
 
         client = bigquery.Client()
-        # client = bigquery.Client.from_service_account_json(r'C:\Users\mathe\OneDrive\Área de Trabalho\POS_TECH\api_embrapa\credentials.json')
 
         query = """
             SELECT * FROM `river-handbook-446101-a0.embrapa.importacao_espumantes`
@@ -102,7 +100,6 @@ def importacao_uvas_frescas_eventos(
     try:
 
         client = bigquery.Client()
-        # client = bigquery.Client.from_service_account_json(r'C:\Users\mathe\OneDrive\Área de Trabalho\POS_TECH\api_embrapa\credentials.json')
 
         query = """
             SELECT * FROM `river-handbook-446101-a0.embrapa.importacao_uvas_frescas`
@@ -142,8 +139,7 @@ def importacao_uvas_passas_eventos(
     try:
 
         client = bigquery.Client()
-        # client = bigquery.Client.from_service_account_json(r'C:\Users\mathe\OneDrive\Área de Trabalho\POS_TECH\api_embrapa\credentials.json')
-
+        
         query = """
             SELECT * FROM `river-handbook-446101-a0.embrapa.importacao_uvas_passas`
         """
@@ -181,7 +177,6 @@ def importacao_suco_uva_eventos(
     try:
 
         client = bigquery.Client()
-        # client = bigquery.Client.from_service_account_json(r'C:\Users\mathe\OneDrive\Área de Trabalho\POS_TECH\api_embrapa\credentials.json')
 
         query = """
             SELECT * FROM `river-handbook-446101-a0.embrapa.importacao_suco_uva`

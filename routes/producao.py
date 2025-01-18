@@ -2,7 +2,6 @@ import json
 import logging
 from fastapi import APIRouter, Depends
 from fastapi import Response, Query
-
 from google.cloud import bigquery
 from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder

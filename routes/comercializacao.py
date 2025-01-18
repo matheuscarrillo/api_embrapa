@@ -22,7 +22,6 @@ def comercializacao_eventos(
     try:
 
         client = bigquery.Client()
-        # client = bigquery.Client.from_service_account_json('C:/Users/thais.r.carvalho/Downloads/credentials.json')
 
         query = """
             SELECT * FROM `river-handbook-446101-a0.embrapa.comercializacao`

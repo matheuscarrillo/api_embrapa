@@ -106,7 +106,7 @@ def download_rename_file(url_pagina, option, descricao, suboption, namecsv):
         caminho_antigo = os.path.join(download_dir, arquivo)
         caminho_novo = os.path.join(download_dir, novo_nome)
         os.rename(caminho_antigo, caminho_novo)
-        print(f"   Arquivo renomeado para: {novo_nome}")
+        print(f"Arquivo renomeado para: {novo_nome}")
 
 for option, descricao in tqdm(dict_options.items()):
     print(f'Iniciando extracao dos dados de: {descricao}')
