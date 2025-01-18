@@ -186,11 +186,29 @@ Este projeto implementa uma API utilizando **FastAPI** para consultar dados arma
 - **`main.py`**: Configura a aplicação FastAPI e inclui as rotas definidas nos módulos correspondentes.
 - **`routes/*.py`**: Implementa a rota `*` que permite consultas filtradas por ano e categoria principal.
 
-## Estrutura de Pastas
+## Códigos Utilizados para o Deploy da API
+### 1. Criação da Imagem no Docker (Build)
+```bash 
+docker build -t gcr.io/river-handbook-446101-a0/api-embrapa-events:<version>
+```
+
+### 2. Salvar a imagem criada no Artifactory Registry (Repositório)
+```bash 
+docker push gcr.io/river-handbook-446101-a0/api-embrapa-events:<version>
+```
+
+### 3. Deploy da API via GCP Client
+```bash
+gcloud run deploy api-embrapa-events --image gcr.io/river-handbook-446101-a0/api-embrapa-events:<version> --platform managed --region us-central1 --allow-unauthenticated --set-secrets embrapa-api-password=embrapa-api-password:latest,secret-key-empbrapa-api=secret-key-empbrapa-api:latest
+```
+
+## Estrutura de Pastas da API
 
 ```plaintext
 .
-├── main.py
+├── app.py
+├── DockerFile
+├── requirements.txt
 └── routes/
     ├── auth.py
     ├── comercializacao.py
@@ -198,3 +216,10 @@ Este projeto implementa uma API utilizando **FastAPI** para consultar dados arma
     ├── importacao.py
     ├── processamento.py
     └── producao.py
+
+```
+## URL da API publicada
+
+``` bash
+https://api-embrapa-events-791475264704.us-central1.run.app/docs
+```
