@@ -180,6 +180,9 @@ Este projeto implementa uma API utilizando **FastAPI** para consultar dados arma
 
 4. Treinamento do Modelo: O Vertex AI utiliza os dados do BigQuery para treinar modelos de aprendizado de máquina. Esses modelos podem ser usados para prever tendências, identificar padrões ou tomar decisões automatizadas com base nos dados da Embrapa.
 
+## Ideia de Arquitetura Futura
+
+![Arquitetura Tech Challenge- 2 drawio](https://github.com/user-attachments/assets/11e82b51-3e16-444e-8719-a2f92d6189be)
 
 
 
@@ -225,3 +228,5 @@ gcloud run deploy api-embrapa-events --image gcr.io/river-handbook-446101-a0/api
 ``` bash
 https://api-embrapa-events-791475264704.us-central1.run.app/docs
 ```
+
+Além da api poder ser testada via Swagger, é possível realizar requisições via Postman, Insomnia, por exemplo.
